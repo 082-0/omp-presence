@@ -25,15 +25,15 @@ The screenshots use sample data. They do not show a real account, chat, or live 
 
 | Build | What changed |
 | --- | --- |
-| [v1 beta](docs/screenshots/beta-v1.png) | Model and effort on Discord. Users supplied their own Discord application ID. |
-| v2 | The app included the public OMP application ID. |
-| v3 | Setup steps stopped showing after the extension was installed. |
-| v4 | The app detected OMP without live extension data. |
-| [v5](docs/screenshots/v5.png) | Project name, optional chat title, username, and safer extension updates. |
-| [v6](docs/screenshots/v6.png) | First dashboard redesign, three themes, and a fallback to saved session details. |
-| **v7** | Focused Home and Settings screens, a local picture, and optional startup with OMP. |
+| [v1 beta](https://github.com/082-0/omp-presence/releases/tag/v1) | Model and effort on Discord. Users supplied their own Discord application ID. |
+| [v2](https://github.com/082-0/omp-presence/releases/tag/v2) | The app included the public OMP application ID. |
+| [v3](https://github.com/082-0/omp-presence/releases/tag/v3) | Setup steps stopped showing after the extension was installed. |
+| [v4](https://github.com/082-0/omp-presence/releases/tag/v4) | The app detected OMP without live extension data. |
+| [v5](https://github.com/082-0/omp-presence/releases/tag/v5) | Project name, optional chat title, username, and safer extension updates. |
+| [v6](https://github.com/082-0/omp-presence/releases/tag/v6) | First dashboard redesign, three themes, and a fallback to saved session details. |
+| **[v7](https://github.com/082-0/omp-presence/releases/tag/v7)** | Focused Home and Settings screens, a local picture, and optional startup with OMP. |
 
-The local Windows EXEs show these changes. This repository starts with the v7 source, not invented earlier commits. [Read the full version history](CHANGELOG.md).
+Each link opens that version's Windows download. Older builds are kept for history; v7 is recommended. This repository starts with the v7 source, not invented earlier commits. [Read the full version history](CHANGELOG.md).
 
 ## Run v7 on Windows
 
