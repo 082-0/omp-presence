@@ -1,26 +1,39 @@
-# OMP Presence
+<div align="center">
+  <img src="assets/omp.png" alt="OMP Presence logo" width="72" />
+  <h1>OMP Presence</h1>
+  <p>Your OMP work, visible on Discord. Your details, your choice.</p>
+  <p>
+    <a href="https://github.com/082-0/omp-presence/releases/latest/download/OMP-Presence-v7-Windows.exe">Download v7 for Windows</a>
+    &nbsp;·&nbsp; <a href="#screenshots">Screenshots</a>
+    &nbsp;·&nbsp; <a href="https://github.com/082-0/omp-presence/discussions/1">Join the v7 discussion</a>
+  </p>
+</div>
 
-Share your OMP activity on Discord. OMP Presence shows your project, optional chat title, model, effort level, and session timer. You choose what to share.
+OMP Presence can show your project, optional chat title, model, effort level, and session timer. You choose what appears in your Discord activity. v7 is the current portable Windows release. It does not need an installer.
 
-**v7 is the main Windows release.** [Download OMP Presence v7 for Windows](https://github.com/082-0/omp-presence/releases/latest/download/OMP-Presence-v7-Windows.exe). This is a portable EXE. There is no installer.
+**macOS and Linux support is coming soon.** Neither platform has a download yet. The current OMP process detector targets Windows.
 
-**macOS and Linux support is coming soon.** Neither platform has a download yet. The current build and the OMP process detector target Windows.
+## Screenshots
 
-![v7 Home screen with sample data](docs/screenshots/v7-home.png)
+<a href="docs/screenshots/v7-home.png"><img src="docs/screenshots/v7-home.png" alt="v7 Home: OMP and Discord status, activity preview, and extension state, all with sample data" width="100%" /></a>
 
-## What changed from the beta?
+<a href="docs/screenshots/v7-settings.png"><img src="docs/screenshots/v7-settings.png" alt="v7 Settings: themes, local picture, username, and presence controls, all with sample data" width="60%" /></a>
 
-The v1 beta made model and effort visible on Discord, but it asked you to set up a Discord application ID. V2 included the public OMP ID, so that step went away. V3 hid the extension setup card when it was no longer needed. V4 detected when OMP was running even before its extension sent data.
+The screenshots use sample data. They do not show a real account, chat, or live Discord session.
 
-V5 added the project name, optional chat title, and username. V6 tried a full dashboard redesign and added three themes. V7 put the live status on Home and moved choices to a separate Settings screen. It also added a local profile picture and the optional **Start with OMP** setting.
+## From the beta to v7
 
-These are changes found in the local v1 through v7 Windows EXEs. This repository begins with the v7 source. It does not pretend that the earlier binaries were Git commits. [Read the full version history](CHANGELOG.md).
-
-| Earlier screens | Current Settings |
+| Build | What changed |
 | --- | --- |
-| [v1 beta](docs/screenshots/beta-v1.png) · [v5](docs/screenshots/v5.png) · [v6](docs/screenshots/v6.png) | [v7 Settings](docs/screenshots/v7-settings.png) |
+| [v1 beta](docs/screenshots/beta-v1.png) | Model and effort on Discord. Users supplied their own Discord application ID. |
+| v2 | The app included the public OMP application ID. |
+| v3 | Setup steps stopped showing after the extension was installed. |
+| v4 | The app detected OMP without live extension data. |
+| [v5](docs/screenshots/v5.png) | Project name, optional chat title, username, and safer extension updates. |
+| [v6](docs/screenshots/v6.png) | First dashboard redesign, three themes, and a fallback to saved session details. |
+| **v7** | Focused Home and Settings screens, a local picture, and optional startup with OMP. |
 
-The screenshots show each version's packaged interface with sample data. They do not show a real account, chat, or live Discord session.
+The local Windows EXEs show these changes. This repository starts with the v7 source, not invented earlier commits. [Read the full version history](CHANGELOG.md).
 
 ## Run v7 on Windows
 
@@ -41,6 +54,10 @@ The OMP, Black, and White themes save as soon as you select them. You can also c
 **Does the app post my prompts?** No. The extension writes the project folder name, optional chat title, model, effort, and time to a local file. Prompts, tool output, and full project paths are not sent to Discord. A chat title is public when you turn on **Chat title**.
 
 **Why does an old screen appear after I open v7?** An older copy is still running in the tray. Quit that copy first. OMP Presence allows only one running copy.
+
+## Talk about the next release
+
+Join the [v7 discussion](https://github.com/082-0/omp-presence/discussions/1) to share your setup, ask questions, or suggest a change. Tell us which OMP version and Windows version you use. Do not post private chat titles, session files, or login tokens. Use [Issues](https://github.com/082-0/omp-presence/issues) for a reproducible bug. macOS and Linux support is planned, but neither platform is available yet.
 
 ## Build from source
 
