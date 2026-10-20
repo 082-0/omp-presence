@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+  <title>OMP Presence</title>
+  <link rel="stylesheet" href="ui.css">
+  <script src="ui.js" defer></script>
+</head>
+<body data-theme="omp">
+  <div class="shell">
+    <header class="topbar">
+      <div class="identity"><span class="logo"><img src="../assets/omp.png" alt=""></span><div><strong>OMP Presence</strong><small>Discord companion</small></div></div>
+      <nav class="nav" aria-label="Main navigation">
+        <button type="button" id="home-nav" class="nav-button" aria-current="page">Home</button>
+        <button type="button" id="settings-nav" class="nav-button" aria-label="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 2.7h3.4l.6 2.1 1.6.9 2.1-.5 1.7 2.9-1.5 1.6v1.8l1.5 1.6-1.7 2.9-2.1-.5-1.6.9-.6 2.1h-3.4l-.6-2.1-1.6-.9-2.1.5-1.7-2.9 1.5-1.6V9.7L4.3 8.1 6 5.2l2.1.5 1.6-.9.6-2.1Z" transform="translate(0 1.5)"/><circle cx="12" cy="12" r="2.8"/></svg>
+          <span>Settings</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="home-view" class="view" aria-labelledby="home-title">
+      <div class="page-head"><div><p class="eyebrow">HOME</p><h1 id="home-title" tabindex="-1">Presence</h1><p class="intro">Your OMP activity on Discord, at a glance.</p></div><button type="button" id="pause" class="button secondary">Pause presence</button></div>
+
+      <section class="panel connection-panel" aria-labelledby="connection-title">
+        <div class="section-head"><div><p class="eyebrow">CONNECTION</p><h2 id="connection-title">Connection status</h2></div><button type="button" id="reconnect" class="button subtle">Reconnect Discord</button></div>
+        <div class="connection-list" role="status" aria-live="polite">
+          <div class="connection"><span class="indicator" id="omp-dot" aria-hidden="true"></span><strong>OMP</strong><span id="omp-status">Checking…</span></div>
+          <div class="connection"><span class="indicator" id="discord-dot" aria-hidden="true"></span><strong>Discord</strong><span id="discord-status">Checking…</span></div>
+        </div>
+        <p id="connection-feedback" class="feedback" role="status" aria-live="polite"></p>
+      </section>
+
+      <div class="home-grid">
+        <section class="panel preview-panel" aria-labelledby="preview-title">
+          <div class="section-head"><div><p class="eyebrow">ACTIVITY</p><h2 id="preview-title">Discord preview</h2></div><span id="preview-badge" class="status-badge">Waiting</span></div>
+          <div class="discord-card"><div class="card-icon"><img src="../assets/omp.png" alt="OMP logo"></div><div class="card-copy"><small id="preview-type">NOT SHARING</small><strong id="preview-name">No activity to show</strong><span id="preview-details">Waiting for OMP and Discord</span><span id="preview-state" hidden></span><span id="preview-time" class="time" hidden></span></div></div>
+          <p class="preview-foot"><span class="indicator" id="preview-dot" aria-hidden="true"></span><span id="preview-caption">Checking your activity…</span></p>
+          <p class="note">This shows your saved Discord presence. Chat titles are public when enabled. Prompts and files stay local.</p>
+        </section>
+        <section class="panel setup-panel" id="setup-panel" aria-labelledby="setup-heading">
+          <div class="section-head"><div><p class="eyebrow">SETUP</p><h2 id="setup-heading">OMP extension</h2></div><span id="setup-badge" class="status-badge">Checking</span></div>
+          <p id="setup-description">Checking the OMP extension…</p>
+          <div id="setup-details" hidden>
+            <button id="install-extension" class="button install-button" type="button">Install OMP extension</button>
+            <p id="install-feedback" class="feedback" role="status" aria-live="polite"></p>
+            <div class="setup-path"><span>INSTALL LOCATION</span><code>%USERPROFILE%\.omp\agent\extensions\omp-presence.js</code></div>
+            <p class="setup-note">The extension shares only the project name (not its full path), optional chat title, model, and effort. For named profiles, install it manually in that profile's extensions folder.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <main id="settings-view" class="view" aria-labelledby="settings-title" hidden>
+      <div class="page-head settings-head"><div><button type="button" id="back-home" class="back-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg> Back to Home</button><h1 id="settings-title" tabindex="-1">Settings</h1><p class="intro">Choose what you share and how this app looks.</p></div></div>
+      <div class="settings-grid">
+        <div class="settings-side">
+          <section class="panel profile-panel" aria-labelledby="profile-title">
+            <div class="section-head"><div><p class="eyebrow">LOCAL PROFILE</p><h2 id="profile-title">Your picture</h2></div></div>
+            <div class="profile-image"><img id="avatar" src="../assets/omp.png" alt="Your local profile image" width="72" height="72"><div><strong>Profile picture</strong><span>Shown in this app only.</span></div></div>
+            <div class="profile-actions"><button type="button" id="pick-avatar" class="button secondary">Choose image</button><button type="button" id="remove-avatar" class="button subtle" disabled>Remove</button></div>
+            <p class="note">Your picture stays on this computer. It does not change your Discord account avatar or OMP's logo in Discord activity.</p>
+            <p id="avatar-feedback" class="feedback" role="status" aria-live="polite"></p>
+          </section>
+          <section class="panel theme-panel" aria-labelledby="theme-title">
+            <div class="section-head"><div><p class="eyebrow">APPEARANCE</p><h2 id="theme-title">App theme</h2></div></div>
+            <div class="themes" role="group" aria-label="App theme">
+              <button type="button" class="theme-choice" data-choice="omp" aria-pressed="true"><span class="theme-swatch omp-swatch" aria-hidden="true"></span>OMP</button>
+              <button type="button" class="theme-choice" data-choice="black" aria-pressed="false"><span class="theme-swatch black-swatch" aria-hidden="true"></span>Black</button>
+              <button type="button" class="theme-choice" data-choice="white" aria-pressed="false"><span class="theme-swatch white-swatch" aria-hidden="true"></span>White</button>
+            </div>
+            <p id="theme-feedback" class="note" role="status" aria-live="polite">Theme changes save automatically.</p>
+          </section>
+        </div>
+        <section class="panel preferences-panel" aria-labelledby="preferences-title">
+          <div class="section-head"><div><p class="eyebrow">DISCORD PRESENCE</p><h2 id="preferences-title">What you share</h2></div></div>
+          <p class="note included-hint">OMP's Discord identity and artwork are included. No Developer Portal setup is needed.</p>
+          <label class="field-label" for="userName">Username <span>OPTIONAL</span></label>
+          <input id="userName" maxlength="30" placeholder="Your name or @handle" autocomplete="off" aria-describedby="username-hint">
+          <p id="username-hint" class="field-hint">Saved to your Discord activity, not your Discord account name. AI account usernames are not read.</p>
+          <div class="toggles" role="group" aria-label="Presence settings">
+            <label class="toggle-row"><span><strong>Chat title</strong><small>Share your current chat title next to the project</small></span><input id="showTitle" type="checkbox"></label>
+            <label class="toggle-row"><span><strong>Model name</strong><small>Show the model in use</small></span><input id="showModel" type="checkbox"></label>
+            <label class="toggle-row"><span><strong>Effort level</strong><small>Show the current thinking level</small></span><input id="showEffort" type="checkbox"></label>
+            <label class="toggle-row"><span><strong>Time elapsed</strong><small>Show how long this OMP session has been active</small></span><input id="showElapsed" type="checkbox"></label>
+            <label class="toggle-row"><span><strong>Start with OMP</strong><small>Start this RPC app when you open OMP. Requires the included extension; restart OMP after enabling.</small></span><input id="launchWithOmp" type="checkbox"></label>
+          </div>
+          <div class="save-row"><button type="button" class="button primary" id="save">Save presence settings</button><p id="feedback" class="feedback" role="status" aria-live="polite"></p></div>
+        </section>
+      </div>
+    </main>
+    <footer><span>Made by <strong>08</strong></span><button type="button" id="github" class="footer-link">GitHub profile <span aria-hidden="true">↗</span></button></footer>
+  </div>
+</body>
+</html>

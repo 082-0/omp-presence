@@ -1,0 +1,41 @@
+{
+  "name": "omp-presence",
+  "version": "0.1.6",
+  "private": true,
+  "description": "Windows Discord Rich Presence companion for OMP",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.js",
+    "build:win": "electron-builder --win --x64 --publish never"
+  },
+  "devDependencies": {
+    "electron": "44.9.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "dev.eight.omppresence",
+    "productName": "OMP Presence",
+    "artifactName": "OMP-Presence-${version}-portable.${ext}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "extension/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "assets/omp.ico",
+      "target": "portable"
+    },
+    "portable": {
+      "requestExecutionLevel": "user"
+    }
+  },
+  "author": {
+    "name": "08",
+    "url": "https://github.com/082-0"
+  }
+}
