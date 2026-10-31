@@ -90,6 +90,6 @@ Closing the window leaves the app in the Windows system tray. Right-click the tr
 
 ## Credits <sub>クレジット</sub>
 
-Made by [08](https://github.com/082-0) · Discord **`meatforlove`**. The OMP mark is based on the [OMP icon](https://github.com/can1357/oh-my-pi/blob/main/assets/icon.svg). The bundled public Discord application ID and `logo` artwork belong to the shared [OMP Discord presence application](https://github.com/abilliontokens/omp-discord-presence). This project does not control that application's future availability. OMP Presence is not affiliated with Discord.
+Made by [08](https://github.com/082-0) · Discord **`meantforlove`**. The OMP mark is based on the [OMP icon](https://github.com/can1357/oh-my-pi/blob/main/assets/icon.svg). The bundled public Discord application ID and `logo` artwork belong to the shared [OMP Discord presence application](https://github.com/abilliontokens/omp-discord-presence). This project does not control that application's future availability. OMP Presence is not affiliated with Discord.
 
 <img src="assets/night/footer.svg" alt="夜に作る · built after dark" width="100%" />
