@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="34" viewBox="0 0 1000 34" role="img" aria-label="Section divider">
+<defs>
+  <linearGradient id="dsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#040307"/><stop offset=".6" stop-color="#0d0817"/><stop offset="1" stop-color="#1a102e"/></linearGradient>
+  <radialGradient id="dmoonGlow"><stop offset="0" stop-color="#cbbcf0" stop-opacity=".22"/><stop offset="1" stop-color="#cbbcf0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="dmoon" cx=".4" cy=".36"><stop offset="0" stop-color="#f1eef6"/><stop offset="1" stop-color="#cfc8de"/></radialGradient>
+  <linearGradient id="drule" gradientUnits="userSpaceOnUse" x1="0" x2="1000" y1="0" y2="0"><stop offset="0" stop-color="#7b5cc4" stop-opacity="0"/><stop offset=".5" stop-color="#7b5cc4" stop-opacity=".7"/><stop offset="1" stop-color="#7b5cc4" stop-opacity="0"/></linearGradient>
+  <g id="dbloom"><path d="M0 0 C-5 -3 -7 -10 -2.8 -14 L0 -12 L2.8 -14 C7 -10 5 -3 0 0Z" transform="rotate(0)" fill="#ddd3ea"/><path d="M0 0 C-5 -3 -7 -10 -2.8 -14 L0 -12 L2.8 -14 C7 -10 5 -3 0 0Z" transform="rotate(72)" fill="#ddd3ea"/><path d="M0 0 C-5 -3 -7 -10 -2.8 -14 L0 -12 L2.8 -14 C7 -10 5 -3 0 0Z" transform="rotate(144)" fill="#ddd3ea"/><path d="M0 0 C-5 -3 -7 -10 -2.8 -14 L0 -12 L2.8 -14 C7 -10 5 -3 0 0Z" transform="rotate(216)" fill="#ddd3ea"/><path d="M0 0 C-5 -3 -7 -10 -2.8 -14 L0 -12 L2.8 -14 C7 -10 5 -3 0 0Z" transform="rotate(288)" fill="#ddd3ea"/><circle r="2.4" fill="#4a3a6a"/></g>
+  <path id="dloose" d="M0 -6 C4 -5 5 2 0 6 C-5 2 -4 -5 0 -6Z" fill="#cfc3e0"/>
+</defs>
+<style>
+  .fall{transform-box:fill-box;transform-origin:center;animation:fall var(--d) linear infinite;animation-delay:var(--s);opacity:0}
+  @keyframes fall{0%{transform:translate(0,0) rotate(0deg);opacity:0}10%{opacity:.7}85%{opacity:.6}100%{transform:translate(var(--x),var(--y)) rotate(var(--r));opacity:0}}
+  .tw{animation:tw var(--d) ease-in-out infinite;animation-delay:var(--s)}
+  @keyframes tw{0%,100%{opacity:.15}50%{opacity:.75}}
+  @media (prefers-reduced-motion:reduce){.fall,.tw{animation:none}.fall{opacity:.55}}
+</style>
+<rect x="40" y="17" width="434" height="1" fill="url(#drule)"/><rect x="526" y="17" width="434" height="1" fill="url(#drule)"/>
+<g transform="translate(489 6) rotate(-3)"><rect width="22" height="22" rx="2.2" fill="#a3122f"/><rect x="1.98" y="1.98" width="18.04" height="18.04" rx="1.3199999999999998" fill="none" stroke="#f3dfe3" stroke-opacity=".55" stroke-width="1"/><text x="11" y="15.84" text-anchor="middle" font-family="'Noto Serif JP','Yu Mincho','Hiragino Mincho ProN','MS Mincho',serif" font-weight="700" font-size="13.64" fill="#f8eef0">在</text></g>
+</svg>
