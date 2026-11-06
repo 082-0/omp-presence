@@ -22,7 +22,7 @@ OMP Presence can show your project, optional chat title, model, effort level, an
 
 <a id="screenshots"></a>
 
-## 桜 · Screenshots
+## ✦ 桜 Screenshots
 
 <a href="docs/screenshots/v7-home.png"><img src="docs/screenshots/v7-home.png" alt="v7 Home: OMP and Discord status, activity preview, and extension state, all with sample data" width="100%" /></a>
 
@@ -44,7 +44,7 @@ The screenshots use sample data. They do not show a real account, chat, or live 
 
 Each link opens that version's Windows download. Older builds are kept for history; v7 is recommended. This repository starts with the v7 source, not invented earlier commits. [Read the full version history](CHANGELOG.md).
 
-## 桜 · Run v7 on Windows
+## ✦ 桜 · Run v7 on Windows
 
 1. Download [OMP Presence v7 for Windows](https://github.com/082-0/omp-presence/releases/latest/download/OMP-Presence-v7-Windows.exe).
 2. If an older OMP Presence copy is open, right-click its system tray icon and choose **Quit**. Closing its window only hides it.
@@ -64,11 +64,11 @@ The OMP, Black, and White themes save as soon as you select them. You can also c
 
 **Why does an old screen appear after I open v7?** An older copy is still running in the tray. Quit that copy first. OMP Presence allows only one running copy.
 
-## 桜 · Talk about the next release
+## ✦ 桜 · Talk about the next release
 
 Join the [v7 discussion](https://github.com/082-0/omp-presence/discussions/1) to share your setup, ask questions, or suggest a change. Tell us which OMP version and Windows version you use. Do not post private chat titles, session files, or login tokens. Use [Issues](https://github.com/082-0/omp-presence/issues) for a reproducible bug. macOS and Linux support is planned, but neither platform is available yet.
 
-## 桜 · Build from source
+## 桜・Build from source
 
 Use Node.js 22.13 or later on Windows. Run these commands from the project folder:
 
@@ -88,7 +88,7 @@ Settings are stored in `%APPDATA%\omp-presence\settings.json`. A chosen profile 
 
 Closing the window leaves the app in the Windows system tray. Right-click the tray icon to pause or quit. Pausing stops Discord activity. The OMP extension can still update its local file while OMP runs.
 
-## 桜 · Credits
+## ✦ 桜 · Credits
 
 Made by [08](https://github.com/082-0) · Discord **`meantforlove.`**. The OMP mark is based on the [OMP icon](https://github.com/can1357/oh-my-pi/blob/main/assets/icon.svg). The bundled public Discord application ID and `logo` artwork belong to the shared [OMP Discord presence application](https://github.com/abilliontokens/omp-discord-presence). This project does not control that application's future availability. OMP Presence is not affiliated with Discord.
 
