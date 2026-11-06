@@ -22,7 +22,7 @@ OMP Presence can show your project, optional chat title, model, effort level, an
 
 <a id="screenshots"></a>
 
-## Screenshots <sub>画像</sub>
+## 桜 · Screenshots
 
 <a href="docs/screenshots/v7-home.png"><img src="docs/screenshots/v7-home.png" alt="v7 Home: OMP and Discord status, activity preview, and extension state, all with sample data" width="100%" /></a>
 
@@ -30,7 +30,7 @@ OMP Presence can show your project, optional chat title, model, effort level, an
 
 The screenshots use sample data. They do not show a real account, chat, or live Discord session.
 
-## From the beta to v7 <sub>履歴</sub>
+## 桜 · From the beta to v7
 
 | Build | What changed |
 | --- | --- |
@@ -44,7 +44,7 @@ The screenshots use sample data. They do not show a real account, chat, or live 
 
 Each link opens that version's Windows download. Older builds are kept for history; v7 is recommended. This repository starts with the v7 source, not invented earlier commits. [Read the full version history](CHANGELOG.md).
 
-## Run v7 on Windows <sub>使い方</sub>
+## 桜 · Run v7 on Windows
 
 1. Download [OMP Presence v7 for Windows](https://github.com/082-0/omp-presence/releases/latest/download/OMP-Presence-v7-Windows.exe).
 2. If an older OMP Presence copy is open, right-click its system tray icon and choose **Quit**. Closing its window only hides it.
@@ -56,7 +56,7 @@ The OMP, Black, and White themes save as soon as you select them. You can also c
 
 **Start with OMP** is off by default. If you enable it, click **Save presence settings** and restart OMP. The extension then starts this EXE when you open OMP. If you move the EXE, run it once from the new location. This setting does not start the app when Windows starts.
 
-## Quick answers <sub>質問</sub>
+## 桜 · Quick answers
 
 **Do I need a Discord application ID?** No. V2 and later include the public OMP application ID. You do not need a bot token or the Discord Developer Portal.
 
@@ -64,11 +64,11 @@ The OMP, Black, and White themes save as soon as you select them. You can also c
 
 **Why does an old screen appear after I open v7?** An older copy is still running in the tray. Quit that copy first. OMP Presence allows only one running copy.
 
-## Talk about the next release <sub>話そう</sub>
+## 桜 · Talk about the next release
 
 Join the [v7 discussion](https://github.com/082-0/omp-presence/discussions/1) to share your setup, ask questions, or suggest a change. Tell us which OMP version and Windows version you use. Do not post private chat titles, session files, or login tokens. Use [Issues](https://github.com/082-0/omp-presence/issues) for a reproducible bug. macOS and Linux support is planned, but neither platform is available yet.
 
-## Build from source <sub>ビルド</sub>
+## 桜 · Build from source
 
 Use Node.js 22.13 or later on Windows. Run these commands from the project folder:
 
@@ -80,7 +80,7 @@ npm run build:win
 
 The portable EXE appears in `dist/`. Use `npm start` to run the app from source. The app uses Electron and the local Discord connection. The OMP extension is in `extension/`. Source, tests, artwork, and screenshots are in this repository. The Windows EXE is a release download, not a file in Git.
 
-## Privacy and limits <sub>プライバシー</sub>
+## 桜 · Privacy and limits
 
 The OMP extension writes the process ID, project folder name, optional chat title, model ID, effort level, and timestamps to `%APPDATA%\omp-presence\live`. The app reads the latest entry. It expires after 12 seconds. Without an entry, the app can read only the title and working directory from the first two lines of a local OMP session file. It uses only the folder name, not the full path. The extension removes its entry when OMP closes normally.
 
@@ -88,8 +88,8 @@ Settings are stored in `%APPDATA%\omp-presence\settings.json`. A chosen profile 
 
 Closing the window leaves the app in the Windows system tray. Right-click the tray icon to pause or quit. Pausing stops Discord activity. The OMP extension can still update its local file while OMP runs.
 
-## Credits <sub>クレジット</sub>
+## 桜 · Credits
 
-Made by [08](https://github.com/082-0) · Discord **`meantforlove`**. The OMP mark is based on the [OMP icon](https://github.com/can1357/oh-my-pi/blob/main/assets/icon.svg). The bundled public Discord application ID and `logo` artwork belong to the shared [OMP Discord presence application](https://github.com/abilliontokens/omp-discord-presence). This project does not control that application's future availability. OMP Presence is not affiliated with Discord.
+Made by [08](https://github.com/082-0) · Discord **`meantforlove.`**. The OMP mark is based on the [OMP icon](https://github.com/can1357/oh-my-pi/blob/main/assets/icon.svg). The bundled public Discord application ID and `logo` artwork belong to the shared [OMP Discord presence application](https://github.com/abilliontokens/omp-discord-presence). This project does not control that application's future availability. OMP Presence is not affiliated with Discord.
 
 <img src="assets/night/footer.svg" alt="夜に作る · built after dark" width="100%" />
